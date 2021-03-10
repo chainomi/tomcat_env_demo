@@ -9,3 +9,4 @@ services:
     restart: always
     ports: 
     - ${HOST_PORT}:${CONT_PORT}
+    image: ${MY_IMAGE_NAME}:latest  

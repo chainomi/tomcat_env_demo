@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 set -xe
 
 echo "copying env files"
@@ -12,5 +13,6 @@ export $(grep -v '^#' docker/.env | xargs -0)
 export $(grep -v '^#' .env | xargs -0)
 
 docker-compose build
-
 docker-compose up -d
+docker-compose images
+docker-compose logs
