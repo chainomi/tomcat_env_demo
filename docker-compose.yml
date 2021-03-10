@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  myapache:
+    build:
+      context: .
+      dockerfile: ${FOLDER}/Dockerfile
+    restart: always
+    ports: 
+    - ${HOST_PORT}:${CONT_PORT}
